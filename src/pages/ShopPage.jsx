@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
 import ProductCard from '../components/ProductCard'
 
-function ShopPage() {
+function ShopPage({ onAddToCart }) {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
-  // Fetch products from FakeStore API
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -23,11 +22,6 @@ function ShopPage() {
     fetchProducts()
   }, [])
 
-  // Handle adding to cart (we'll connect this to App state later)
-  const handleAddToCart = (product, quantity) => {
-    console.log('Added to cart:', product.title, 'Quantity:', quantity)
-  }
-
   if (loading) return <div className="loading">Loading products...</div>
   if (error) return <div className="error">Error: {error}</div>
 
@@ -39,7 +33,7 @@ function ShopPage() {
           <ProductCard 
             key={product.id} 
             product={product} 
-            onAddToCart={handleAddToCart}
+            onAddToCart={onAddToCart}
           />
         ))}
       </div>
