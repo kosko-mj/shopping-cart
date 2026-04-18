@@ -1,22 +1,19 @@
 function CartPage({ cart, updateQuantity, removeFromCart }) {
-  // Calculate subtotal for an item
   const getSubtotal = (item) => {
     return item.price * item.quantity
   }
 
-  // Calculate grand total for all items
   const getGrandTotal = () => {
     return cart.reduce((total, item) => total + getSubtotal(item), 0)
   }
 
-  // If cart is empty, show empty state
   if (cart.length === 0) {
     return (
       <div className="cart-page">
-        <h1>Your Cart</h1>
+        <h1>Your cart</h1>
         <div className="empty-cart">
           <p>Your cart is empty</p>
-          <a href="/shop" className="continue-shopping">Continue Shopping</a>
+          <a href="/shop" className="continue-shopping">Continue shopping</a>
         </div>
       </div>
     )
@@ -24,11 +21,18 @@ function CartPage({ cart, updateQuantity, removeFromCart }) {
 
   return (
     <div className="cart-page">
-      <h1>Your Cart</h1>
+      <h1>Your cart</h1>
       <div className="cart-items">
         {cart.map((item) => (
           <div key={item.id} className="cart-item">
-            <img src={item.image} alt={item.title} className="cart-item-image" />
+            <img 
+              src={item.thumbnail || item.image || item.images?.[0]} 
+              alt={item.title} 
+              className="cart-item-image" 
+              onError={(e) => {
+                e.target.src = 'https://placehold.co/80x80?text=No+Image'
+              }}
+            />
             <div className="cart-item-details">
               <h3>{item.title}</h3>
               <p className="cart-item-price">${item.price.toFixed(2)}</p>
@@ -64,7 +68,7 @@ function CartPage({ cart, updateQuantity, removeFromCart }) {
         <div className="grand-total">
           <strong>Total:</strong> ${getGrandTotal().toFixed(2)}
         </div>
-        <button className="checkout-btn">Proceed to Checkout</button>
+        <button className="checkout-btn">Checkout</button>
       </div>
     </div>
   )
