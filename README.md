@@ -2,6 +2,8 @@
 
 **A curated editorial boutique — because we have no idea what we're doing either.**
 
+[Live Demo](https://no-idea-shop.netlify.app)
+
 ## About
 
 NO IDEA is a conceptual e-commerce storefront built as a satirical take on curated fashion and home goods boutiques. The site embraces its lack of direction with self-aware copy and a clean, editorial aesthetic.
