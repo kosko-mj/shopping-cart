@@ -497,6 +497,37 @@ body {
   font-size: 0.7rem;
 }
 
+/* Kosko Footer */
+.kosko-footer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 0.75rem;
+  text-align: center;
+  
+}
+
+.kosko-footer a {
+  color: #999;
+  text-decoration: none;
+  font-size: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: 'Boldonse', cursive;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  transition: all 0.2s;
+}
+
+.kosko-footer a:hover {
+  color: #A52A2A;
+  letter-spacing: 0.5px;
+}
+
+.kosko-footer i {
+  font-size: 0.7rem;
+}
+
 /* ---------- LOADING & ERROR ---------- */
 .loading, .error {
   text-align: center;

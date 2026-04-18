@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import ShopPage from './pages/ShopPage'
 import CartPage from './pages/CartPage'
 import './styles/global.css'
+import KoskoFooter from './components/KoskoFooter'
 
 function App() {
   const [cart, setCart] = useState([])
@@ -61,6 +62,7 @@ function App() {
       <footer className="footer">
         <p>© NO IDEA — We still don't know what we're doing.</p>
       </footer>
+      <KoskoFooter />
     </div>
   )
 }
