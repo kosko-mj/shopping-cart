@@ -1,16 +1,55 @@
-# React + Vite
+# NO IDEA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A curated editorial boutique — because we have no idea what we're doing either.**
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+NO IDEA is a conceptual e-commerce storefront built as a satirical take on curated fashion and home goods boutiques. The site embraces its lack of direction with self-aware copy and a clean, editorial aesthetic.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Curated Product Selection** – Products pulled from DummyJSON API, organized into intentional categories (Furniture, Home Decor, Kitchen, Grooming, New Arrivals)
+- **Editorial Homepage** – Hero section with brand messaging and image layout
+- **Responsive Product Grid** – 4-column grid that adapts to tablet and mobile
+- **Sidebar Navigation** – Hamburger menu with category filtering
+- **Price Filtering** – Filter products by price range
+- **Shopping Cart** – Add/remove items, update quantities, persistent cart state
+- **Clean Aesthetic** – Minimal design with white background, black text
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 18
+- React Router
+- DummyJSON API
+- CSS3
+
+## Installation
+
+1. Clone the repository:
+   `git clone https://github.com/kosko-mj/shopping-cart.git`
+
+2. Navigate to the project:
+   `cd shopping-cart`
+
+3. Install dependencies:
+   `npm install`
+
+4. Start the development server:
+   `npm run dev`
+
+## What I Learned
+
+- Integrating external APIs with React
+- Building a functional cart with persistent state
+- Creating responsive grid layouts
+- Implementing client-side routing
+- Designing a cohesive brand identity
+
+## Credits
+
+- Product data by [DummyJSON](https://dummyjson.com/)
+- Icons by [RemixIcon](https://remixicon.com/)
+
+---
+
+*Built as part of [The Odin Project](https://www.theodinproject.com/) curriculum.*
